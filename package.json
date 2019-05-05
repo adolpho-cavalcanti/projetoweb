@@ -1,0 +1,18 @@
+{
+  "name": "projetoweb",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mongoose": "^5.5.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  }
+}
