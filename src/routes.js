@@ -2,9 +2,9 @@ const express = require('express');
 
 const routes = express.Router();
 
+const PastaController = require('./controllers/PastaController')
 
-routes.get('/', (req, res) => { //req: requisição contém variáveis e outros dados | res: retorna uma resposta desta requisição
-    return res.send('index.ejs');
-})
+routes.post('/pasta', PastaController.store); //req e res foram p/ o controller
+
 
 module.exports = routes; //exporta alguma info do arq. no caso a var routes da linha 3.
