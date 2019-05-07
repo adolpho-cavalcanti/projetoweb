@@ -15,4 +15,4 @@ const Arquivo = new mongoose.Schema({
 }
 );
 
-module.exports = mongoose.model("Arquivo", Arquivo); //Estou definindo o mongoose com o nome "Pasta" 
+module.exports = mongoose.model("Arquivo", Arquivo); //Estou definindo o mongoose com o nome "Arquivo" 

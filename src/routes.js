@@ -16,4 +16,4 @@ routes.post(
     );
 
 
-module.exports = routes; //exporta alguma info do arq. no caso a var routes da linha 3.
+module.exports = routes; //exporta alguma info do arq. no caso a var routes.
