@@ -8,6 +8,14 @@ class PastaController {
 
         return res.json(pasta);
     }
+    async show(req, res) {
+        const pasta = await Pasta.findById(req.params.id).populate({
+            caminho: 'arq',
+            options: { sort: { createdAt: -1 } }
+        }); //arq é o nome do relacionamento
+         //essa linha ordena de forma descrescente os arquivos, do mais novo para o mais antigo. Se fosse 1 ao invés de -1, seria ordenação cresecente do mais antigo para o mais novo
+        return res.json(pasta);
+    }
 }
 
 module.exports = new PastaController(); // o new serve para acessar os métodos da classe PastaController

@@ -6,7 +6,7 @@ const Pasta = new mongoose.Schema({
         required: true,
     },
     //O arq é um array de model.arq
-    arq: [{ type: mongoose.Schema.Types.ObjectId, ref: "Arquivo" }] // essearq irá armazenar os arquivos com ids pertencente a esta pasta
+    arq: [{ type: mongoose.Schema.Types.ObjectId, ref: "Arquivo" }] // esse arq irá armazenar os arquivos com ids pertencente a esta pasta
 },
 {
     timestamps: true

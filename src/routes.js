@@ -9,8 +9,10 @@ const ArquivoController = require('./controllers/ArquivoController')
 
 routes.post("/pasta", PastaController.store); //req e res foram p/ o controller
     //single é p/ enviar apenas um arq. por vez, e "arquivo" tem q ser o valor do campo de mesmo nome no front-end
+routes.get("/pasta/:id", PastaController.show);
+
 routes.post(
-    "/arquivo", 
+    "/pasta/:id/arquivo", 
     multer(multerconfig).single('arquivo'), 
     ArquivoController.store
     );
