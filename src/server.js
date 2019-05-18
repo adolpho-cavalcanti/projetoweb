@@ -4,9 +4,9 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-mongoose.connect('mongodb+srv://elnino:elnino@cluster0-dcd07.mongodb.net/test?retryWrites=true', {
-    useNewUrlParser: true
-});
+//mongoose.connect('mongodb+srv://elnino:elnino@cluster0-dcd07.mongodb.net/test?retryWrites=true', {
+  //  useNewUrlParser: true
+//});
 
 app.use(express.json()); // trabalha com arq. json
 app.use(express.urlencoded({ extended: true})); // permite o envio de arquivos
