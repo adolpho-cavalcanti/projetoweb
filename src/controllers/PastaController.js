@@ -10,9 +10,9 @@ class PastaController {
     }
     async show(req, res) {
         const pasta = await Pasta.findById(req.params.id).populate({
-            caminho: 'arq',
+            path: 'arq',
             options: { sort: { createdAt: -1 } }
-        }); //arq é o nome do relacionamento
+        }); // arq é o nome do relacionamento
          //essa linha ordena de forma descrescente os arquivos, do mais novo para o mais antigo. Se fosse 1 ao invés de -1, seria ordenação cresecente do mais antigo para o mais novo
         return res.json(pasta);
     }

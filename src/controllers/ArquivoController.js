@@ -16,6 +16,8 @@ class ArquivoController {
         pasta.arq.push(arquivo);
         await pasta.save();
 
+        req.io.sockets.in(pasta.id).emit("arquivo", arquivo); //aq pega todos os users conectados nesta pasta com este id
+
         return res.json(arquivo); //vou retorná o arquivo que acabou de ser criado p/ o front
     }
 }
