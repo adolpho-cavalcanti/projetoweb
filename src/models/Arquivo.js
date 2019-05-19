@@ -18,7 +18,9 @@ const Arquivo = new mongoose.Schema({
 );
 //Campo Virtual(existe só no lado do back)
 Arquivo.virtual('url').get(function() {
-    return `http://localhost:3333/arquivo/${encodeURIComponent(this.caminho)}`
+    const url = process.env.URL || 'http://localhost:3333'
+
+    return `${url}/arquivo/${encodeURIComponent(this.caminho)}`
 })
 
 module.exports = mongoose.model("Arquivo", Arquivo); //Estou definindo o mongoose com o nome "Arquivo" 

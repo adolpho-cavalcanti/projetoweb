@@ -35,7 +35,7 @@ app.use('/arquivo', express.static(path.resolve(__dirname, '..', 'tmp'))); //Tod
 app.use(require("./routes"))// importando o arquivo. routes.js
 
 
-server.listen(3333);
+server.listen(process.env.PORT || 3333);
 
 /*MVC dentro do projeto Web 2:
 Model-> entende-se como uma abstração do banco de dados, cada tabela ou schema do BD 
