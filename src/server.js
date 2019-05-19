@@ -32,7 +32,7 @@ app.use(express.json()); // trabalha com arq. json
 app.use(express.urlencoded({ extended: true})); // permite o envio de arquivos
 app.use('/arquivo', express.static(path.resolve(__dirname, '..', 'tmp'))); //Toda vez q a rota arquivo for acessada. isso vai buscar os arquivos físicos da pasta tmp
 
-app.use(require("./routes"))// importando o arquivo. routes.js
+app.use(require("./routes"))// importando o arquivo. routes.js  
 
 
 server.listen(process.env.PORT || 3333);
